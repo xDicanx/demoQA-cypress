@@ -8,7 +8,7 @@ describe('Modify quantity and remove items from cart test', () => {
         cy.addToCart();
     });
 
-    it.skip('modify quantity from a random item', () => {
+    it('modify quantity from a random item', () => {
         selectRandomProductInCart();//creates randomCartRow
         const randomQuantity = randomNumber(99);
         cy.get('@randomCartRow').find('.cart-quantity-input').clear().type(randomQuantity + '{enter}');
