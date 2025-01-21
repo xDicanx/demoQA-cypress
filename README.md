@@ -57,7 +57,7 @@ qa-practice-portfolio/
 ### **Steps to Run Tests**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/qa-practice-portfolio.git
+   git clone https://github.com/xDicanx/demoQA-cypress
    cd qa-practice-portfolio
    ```
 2. Install dependencies:
