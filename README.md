@@ -32,7 +32,6 @@ Visit the live site: [https://qa-practice.netlify.app/graphql-testing](https://q
 
 1. [Node.js](https://nodejs.org/) installed on your machine.
 2. Cypress installed (globally or locally via npm).
-3. **Faker.js** for generating dynamic test data (automatically installed as a dependency).
 
 ### Steps to Run Tests
 
@@ -84,10 +83,3 @@ This project is open source and available under the [MIT License](./LICENSE).
 ---
 
 Feel free to explore the repository and reach out for any questions or feedback. 😊
-
-### Notes:
-1. **Faker.js**: Since it's commonly used via npm, it's included as part of `npm install`. If a manual installation is needed, the steps can be added.
-2. **Links to Subdirectories**: The placeholders like `api-tests/README.md` assume these exist. If not, adjust as needed.
-3. **Live Demo**: The link to your site is prominently featured.  
-
-Let me know if you need more adjustments or additional sections! 🚀
