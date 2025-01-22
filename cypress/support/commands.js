@@ -94,6 +94,7 @@ Cypress.Commands.add("verifyCartSum", () => {
 //REST API testing commands
 //faker account generator
 import { faker } from '@faker-js/faker'; // Ensure correct import
+const baseUrl = "http://localhost:8887"; // Base URL for the API
 
 export const generateRandomEmployee = () => {
   return {
@@ -106,14 +107,29 @@ export const generateRandomEmployee = () => {
 };
 
 Cypress.Commands.add('getLastEmployeeId',()=>{
-  const baseUrl = "http://localhost:8887"; // Base URL for the API
+  
   cy.request({
     method: "GET",
     url: `${baseUrl}/api/v1/employees`,
   }).then((response) => {
     const employees = response.body;
-    const lastEmployeeId = employees.length;
+    const lastEmployee = employees[employees.length - 1];
+    const lastEmployeeId = lastEmployee.id;
     cy.wrap(lastEmployeeId).as("lastEmployeeId");
+  });
+});
+
+Cypress.Commands.add('tokenGenerator',()=>{
+  cy.request({
+    method: "POST",
+    url: `${baseUrl}/api/v1/simulate/token`,
+    body: {
+      password: 'admin',
+      username: 'admin',
+    },
+  }).then((response)=>{
+    expect(response.status).to.eq(200);
+    cy.wrap(response.body.token).as('authToken');
   });
 });
 
