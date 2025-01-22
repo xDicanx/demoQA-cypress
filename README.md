@@ -60,8 +60,8 @@ Visit the live site: [https://qa-practice.netlify.app/graphql-testing](https://q
   
   -Detailed instructions can be found in the - [API Testing](https://github.com/xDicanx/demoQA-cypress/tree/main/cypress/e2e/API%20testing).  
 
-### GraphQL Testing
-
+### GraphQL Testing 
+*WORK IN PROGRESS*
 - **What is tested?**  
   Queries and mutations using GraphQL.  
 - **Setup:**  
