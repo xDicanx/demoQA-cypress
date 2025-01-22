@@ -5,6 +5,7 @@ describe('Add to cart testing', () => {
 
   //Add to cart 
   it('Add to cart', () => {
+    cy.goToEcommerceSection();
     cy.login(username,password);
     cy.addToCart();
     cy.verifyCartSum();

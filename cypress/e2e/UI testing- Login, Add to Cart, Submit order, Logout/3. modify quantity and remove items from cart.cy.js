@@ -4,6 +4,7 @@ describe('Modify quantity and remove items from cart test', () => {
     const password = Cypress.env('password');
 
     beforeEach(() => {
+        cy.goToEcommerceSection();
         cy.login(username, password);
         cy.addToCart();
     });

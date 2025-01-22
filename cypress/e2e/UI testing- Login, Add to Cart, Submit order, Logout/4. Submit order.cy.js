@@ -3,6 +3,7 @@ describe('proceed order', () => {
     const username = Cypress.env('username');
     const password = Cypress.env('password');
     it('submit', () => {
+        cy.goToEcommerceSection();
         cy.login(username, password);
         cy.addToCart();
         cy.verifyCartSum().as('cartTotal');
@@ -28,15 +29,15 @@ describe('proceed order', () => {
                 cy.wrap($input).type(typeInput); // Realizar acciones sobre cada input
             });
         });
-        let selectedCountry;
         selectRandomCountryFromDropDownList();
         cy.get('button[type="submit"]').should('be.visible').click();
         cy.scrollTo('top');
-        verifyIfMessageContainImportantData(); //total, street address, city, country
+        verifyIfMessageContainsImportantData(); //total, street address, city, country
+        cy.screenshot('submited-order');
     });
 });
 
-function verifyIfMessageContainImportantData() {
+function verifyIfMessageContainsImportantData() {
     cy.get('@cartTotal').then(total => {
         cy.get('#message').should('contain.text', '$' + total);
         cy.get('#message').should('contain.text', 'This is an street address');
