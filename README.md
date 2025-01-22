@@ -1,60 +1,42 @@
-Here’s an updated version of your `README.md` file:
+```markdown
+# QA Practice Portfolio
+
+This project showcases my skills in test automation using Cypress for web applications. It includes tests for the **UI**, **REST API**, and **GraphQL**, demonstrating my ability to design and execute reliable test scripts for common functionalities. The repository is intended to serve as a resource for potential employers or collaborators to evaluate my expertise.
+
+## Table of Contents
+
+1. [About This Portfolio](#about-this-portfolio)
+2. [Setup and Run Instructions](#setup-and-run-instructions)
+3. [Testing Overview](#testing-overview)
+    - [UI Testing](#ui-testing)
+    - [REST API Testing](#rest-api-testing)
+    - [GraphQL Testing](#graphql-testing)
+4. [Test Evidence](#test-evidence)
+5. [License](#license)
 
 ---
 
-# **QA Automation Portfolio - Cypress Tests for qa-practice.netlify.app**
+## About This Portfolio
 
-## **Description**
-This repository contains automated test scripts developed with Cypress for the site [qa-practice.netlify.app](https://qa-practice.netlify.app). The tests cover essential functionalities such as login/logout, cart management, and order submission, simulating real-world scenarios for QA practice.
+This project highlights:
+- Test automation using **Cypress**.
+- Skills in testing **UI**, **REST APIs**, and **GraphQL endpoints**.
+- Use of tools and libraries like **Faker.js** to generate dynamic test data.
 
-## **Test Scenarios**
-### **1. Login and Logout**
-- **Valid Login:** Verifies successful login with correct credentials.
-- **Invalid Login:** Tests login with incorrect credentials and checks for error messages.
-- **Logout:** Confirms successful logout and session termination.
+Visit the live site: [https://qa-practice.netlify.app/graphql-testing](https://qa-practice.netlify.app/graphql-testing)
 
-### **2. Add to Cart**
-- Adds products to the cart from the product list.
-- Ensures items are displayed in the cart with correct details.
+---
 
-### **3. Modify Cart**
-- Randomly modifies the quantity of items in the cart.
-- Removes items from the cart and verifies the updated total.
+## Setup and Run Instructions
 
-### **4. Submit Order**
-- Completes the order process with valid data.
-- Validates the confirmation message after successful order submission.
+### Prerequisites
 
-## **Technologies Used**
-- **Language:** JavaScript
-- **Framework:** Cypress
-- **Tools:** Git, GitHub
+1. [Node.js](https://nodejs.org/) installed on your machine.
+2. Cypress installed (globally or locally via npm).
+3. **Faker.js** for generating dynamic test data (automatically installed as a dependency).
 
-## **Repository Structure**
-```
-qa-practice-portfolio/
-├── README.md
-├── cypress/
-│   ├── e2e/
-│   │   ├── login_logout.cy.js
-│   │   ├── add_to_cart.cy.js
-│   │   ├── modify_cart.cy.js
-│   │   └── submit_order.cy.js
-│   ├── fixtures/
-│   ├── support/
-│   │   ├── commands.js
-│   │   └── e2e.js
-├── package.json
-├── cypress.config.js
-└── screenshots/
-```
+### Steps to Run Tests
 
-## **Setup and Run Instructions**
-### **Prerequisites**
-- Node.js installed on your machine.
-- Cypress installed globally or locally via npm.
-
-### **Steps to Run Tests**
 1. Clone the repository:
    ```bash
    git clone https://github.com/xDicanx/demoQA-cypress
@@ -73,16 +55,55 @@ qa-practice-portfolio/
    npx cypress run
    ```
 
-## **Test Evidence**
-- **Screenshots:** Located in the `screenshots/` folder to illustrate test results.
-- Key screenshots include:
-  - Successful login.
-  - Item added to the cart.
-  - Order confirmation message.
+---
 
-## **About This Portfolio**
-This project showcases my skills in test automation using Cypress. It highlights my ability to design and execute reliable test scripts for common web application functionalities. The repository can serve as a resource for demonstrating my expertise to potential employers or collaborators.
+## Testing Overview
+
+### UI Testing
+
+- **What is tested?**  
+  Login/logout functionality, adding items to the cart, modifying quantity, removing items, and submitting orders.  
+- **Tools used:**  
+  [Cypress](https://www.cypress.io/)  
+
+### REST API Testing
+
+- **What is tested?**  
+  REST API endpoints for the application, ensuring expected responses for CRUD operations.  
+- **Setup:**  
+  Requires Docker. Detailed instructions can be found in the [`api-tests/README.md`](./api-tests/README.md).  
+
+### GraphQL Testing
+
+- **What is tested?**  
+  Queries and mutations using GraphQL.  
+- **Setup:**  
+  Tests are executed via Docker. Details in the [`graphql-tests/README.md`](./graphql-tests/README.md).  
 
 ---
 
-Feel free to personalize this further or let me know if you'd like additional modifications. 😊
+## Test Evidence
+
+Test artifacts are stored in the following folders:
+- **Screenshots:** Located in the `screenshots/` folder to illustrate test results.
+  - Successful login.
+  - Item added to the cart.
+  - Order confirmation message.  
+
+---
+
+## License
+
+This project is open source and available under the [MIT License](./LICENSE).
+
+---
+
+Feel free to explore the repository and reach out for any questions or feedback. 😊
+```
+
+### Notes:
+1. **Faker.js**: Since it's commonly used via npm, it's included as part of `npm install`. If a manual installation is needed, the steps can be added.
+2. **Links to Subdirectories**: The placeholders like `api-tests/README.md` assume these exist. If not, adjust as needed.
+3. **Live Demo**: The link to your site is prominently featured.  
+
+Let me know if you need more adjustments or additional sections! 🚀
