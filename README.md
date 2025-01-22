@@ -32,6 +32,7 @@ Visit the live site: [https://qa-practice.netlify.app/graphql-testing](https://q
 
 1. [Node.js](https://nodejs.org/) installed on your machine.
 2. Cypress installed (globally or locally via npm).
+3. Docker installed
 
 ### Steps to Run Tests
 
