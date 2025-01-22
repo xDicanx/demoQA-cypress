@@ -90,15 +90,9 @@ Cypress.Commands.add("verifyCartSum", () => {
         });
     });
 });
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-// cypress/support/commands.js or a separate utils file
+//REST API testing commands
+//faker account generator
 import { faker } from '@faker-js/faker'; // Ensure correct import
 
 export const generateRandomEmployee = () => {
@@ -111,4 +105,15 @@ export const generateRandomEmployee = () => {
   };
 };
 
+Cypress.Commands.add('getLastEmployeeId',()=>{
+  const baseUrl = "http://localhost:8887"; // Base URL for the API
+  cy.request({
+    method: "GET",
+    url: `${baseUrl}/api/v1/employees`,
+  }).then((response) => {
+    const employees = response.body;
+    const lastEmployeeId = employees.length;
+    cy.wrap(lastEmployeeId).as("lastEmployeeId");
+  });
+});
 
