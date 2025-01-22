@@ -22,7 +22,7 @@ This project highlights:
 - Skills in testing **UI**, **REST APIs**, and **GraphQL endpoints**.
 - Use of tools and libraries like **Faker.js** to generate dynamic test data.
 
-Visit the live site: [https://qa-practice.netlify.app/graphql-testing](https://qa-practice.netlify.app/graphql-testing)
+Visit the live site: [https://qa-practice.netlify.app/graphql-testing](https://qa-practice.netlify.app)
 
 ---
 
