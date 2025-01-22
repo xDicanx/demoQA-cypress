@@ -1,4 +1,3 @@
-```markdown
 # QA Practice Portfolio
 
 This project showcases my skills in test automation using Cypress for web applications. It includes tests for the **UI**, **REST API**, and **GraphQL**, demonstrating my ability to design and execute reliable test scripts for common functionalities. The repository is intended to serve as a resource for potential employers or collaborators to evaluate my expertise.
@@ -41,21 +40,7 @@ Visit the live site: [https://qa-practice.netlify.app/graphql-testing](https://q
    ```bash
    git clone https://github.com/xDicanx/demoQA-cypress
    cd qa-practice-portfolio
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run Cypress in interactive mode:
-   ```bash
-   npx cypress open
-   ```
-4. Execute all tests in headless mode:
-   ```bash
-   npx cypress run
-   ```
 
----
 
 ## Testing Overview
 
