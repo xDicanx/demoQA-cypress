@@ -84,7 +84,6 @@ This project is open source and available under the [MIT License](./LICENSE).
 ---
 
 Feel free to explore the repository and reach out for any questions or feedback. 😊
-```
 
 ### Notes:
 1. **Faker.js**: Since it's commonly used via npm, it's included as part of `npm install`. If a manual installation is needed, the steps can be added.
