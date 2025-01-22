@@ -56,7 +56,7 @@ Visit the live site: [https://qa-practice.netlify.app/graphql-testing](https://q
 - **What is tested?**  
   REST API endpoints for the application, ensuring expected responses for CRUD operations.  
 - **Setup:**  
-  Requires Docker. Detailed instructions can be found in the [`API testing/README.md`]([./cypress/e2e/API%20testing/README.md)).  
+  Requires Docker. Detailed instructions can be found in the - [API Testing](https://github.com/xDicanx/demoQA-cypress/tree/main/cypress/e2e/API%20testing).  
 
 ### GraphQL Testing
 
